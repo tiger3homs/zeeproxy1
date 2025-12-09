@@ -3,13 +3,15 @@ export default {
     const { searchParams } = new URL(req.url);
     const target = searchParams.get("url");
 
-    if (!target) {
-      return new Response("Missing url parameter", { status: 400 });
-    }
+    if (!target) return new Response("Missing url", { status: 400 });
 
     try {
       const upstream = await fetch(target, {
-        headers: { "User-Agent": "Cloudflare-HLS-Proxy" },
+        headers: {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+          "Accept": "*/*",
+          "Referer": target,
+        },
       });
 
       return new Response(upstream.body, {
