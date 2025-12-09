@@ -9,7 +9,7 @@ export default {
 
       // Optional token protection
       const token = searchParams.get("token");
-      const REQUIRED_TOKEN = "YOUR_SECRET_TOKEN"; // Replace with your secret token
+      const REQUIRED_TOKEN = "a3f9d7e2b4c1f6e98a2d3b4c5f6a7e8d"; // Replace with your secret token
       if (REQUIRED_TOKEN && token !== REQUIRED_TOKEN) {
         return new Response("Forbidden: Invalid token", { status: 403 });
       }
