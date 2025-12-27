@@ -1,5 +1,0 @@
-account_id = "27b2346793d3f003db8f5c2822baf7b5"
-name = "zeeproxy1"  # optional; you can leave it as-is or match the CI name
-main = "index.js"
-type = "javascript"
-compatibility_date = "2025-12-09"
